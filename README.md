@@ -14,8 +14,8 @@ Phạm Đức Thiện
 ## Team Members
 
 | Name | Student ID | Role | Contribution |
-|------|------------|------|-------------|
-|      |            |      |             |
+|Đinh Viết Chiến|B22DCVT076|------|-------------|
+|Phạm Đức Thiện|B22DCDT309|      |             |
 
 ---
 
