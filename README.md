@@ -62,7 +62,7 @@ Nội dung bao gồm:
 
 ## 🏗️ Kiến trúc hệ thống
 
-(Sơ đồ chi tiết xem trong `docs/architecture.md`)
+(Sơ đồ chi tiết xem trong ` docs/architecture.md `)
 
 ```mermaid
 flowchart LR
