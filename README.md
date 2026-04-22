@@ -1,82 +1,80 @@
-Phạm Đức Thiện
+🎓 Hệ thống đăng ký đề tài đồ án - Microservices
 
+📌 Mô tả dự án
 
-[![Stars](https://img.shields.io/github/stars/hungdn1701/microservices-assignment-starter?style=social)](https://github.com/hungdn1701/microservices-assignment-starter/stargazers)
-[![Forks](https://img.shields.io/github/forks/hungdn1701/microservices-assignment-starter?style=social)](https://github.com/hungdn1701/microservices-assignment-starter/network/members)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Dự án xây dựng hệ thống đăng ký đề tài đồ án tốt nghiệp theo kiến trúc hướng dịch vụ (Microservices).
 
-> Brief description of the business process being automated and the service-oriented solution.
+Hệ thống giúp tự động hóa quy trình:
 
-> **New to this repo?** See [`GETTING_STARTED.md`](GETTING_STARTED.md) for setup instructions, workflow guide, and submission checklist.
+Sinh viên tìm kiếm và đăng ký đề tài
+Giảng viên tạo và quản lý đề tài
+Giảng viên xét duyệt đăng ký
+Hệ thống lưu trữ và cập nhật kết quả
 
----
+👉 Giải pháp sử dụng API Gateway + các dịch vụ độc lập giúp hệ thống dễ mở rộng và bảo trì.
 
-## Team Members
+🚀 Bắt đầu
 
-| Name | Student ID | Role | Contribution |
+Bạn mới sử dụng kho lưu trữ này?
+Hãy xem GETTING_STARTED.md để biết:
 
-|Đinh Viết Chiến|B22DCVT076|------|-------------|
+Cách thiết lập môi trường
+Quy trình làm việc
+Checklist nộp bài
+👥 Thành viên nhóm
+Họ và tên	Mã số sinh viên	Vai trò	Đóng góp
+Đinh Viết Chiến	B22DCVT076	Backend Developer	API Gateway, User Service
+Phạm Đức Thiện	B22DCDT309	Backend Developer	Topic Service, Registration Service, Frontend
+🔄 Quy trình kinh doanh
 
-|Phạm Đức Thiện|B22DCDT309|      |             |
+Sinh viên đăng ký đề tài đồ án và giảng viên xét duyệt
 
----
+Tác nhân:
+Sinh viên
+Giảng viên
+Quản trị viên
+Quy trình:
+Giảng viên tạo đề tài
+Sinh viên xem danh sách đề tài
+Sinh viên đăng ký đề tài
+Hệ thống kiểm tra điều kiện
+Giảng viên xét duyệt (duyệt/từ chối)
+Hệ thống cập nhật kết quả đăng ký
+🏗️ Kiến trúc hệ thống
 
-## Business Process
+(Sơ đồ chi tiết xem trong docs/architecture.md)
 
-*(Summarize the **one business process** being automated — domain, actors, scope. Example: "Customer places an order and receives delivery in the Online Food Delivery domain.")*
+Thành phần	Trách nhiệm	Công nghệ	Cổng
+Giao diện người dùng	Hiển thị và tương tác người dùng	React	3000
+Gateway	Điều phối API	Node.js + Express	8080
+User Service	Quản lý tài khoản, đăng nhập	Node.js + Express	5001
+Topic Service	Quản lý đề tài	Node.js + Express	5002
+Registration Service	Xử lý đăng ký và xét duyệt	Node.js + Express	5003
+⚡ Hướng dẫn nhanh
 
----
+Chạy hệ thống:
 
-## Architecture
-
-*(Paste or update the architecture diagram from [`docs/architecture.md`](docs/architecture.md) here.)*
-
-```mermaid
-graph LR
-    U[User] --> FE[Frontend :3000]
-    FE --> GW[API Gateway :8080]
-    GW --> SA[Service A :5001]
-    GW --> SB[Service B :5002]
-    SA --> DB1[(Database A)]
-    SB --> DB2[(Database B)]
-```
-
-| Component     | Responsibility | Tech Stack | Port |
-|---------------|----------------|------------|------|
-| **Frontend**  |                |            | 3000 |
-| **Gateway**   |                |            | 8080 |
-| **Service A** |                |            | 5001 |
-| **Service B** |                |            | 5002 |
-
----
-
-## Quick Start
-
-```bash
 docker compose up --build
-```
 
-Verify: `curl http://localhost:8080/health`
+Xác minh:
 
-> For full setup instructions, prerequisites, and development commands, see [`GETTING_STARTED.md`](GETTING_STARTED.md).
+curl http://localhost:8080/health
+curl http://localhost:5001/health
+curl http://localhost:5002/health
+curl http://localhost:5003/health
+📚 Tài liệu
+Tài liệu	Mô tả
+GETTING_STARTED.md	Hướng dẫn setup và workflow
+docs/analysis-and-design.md	Phân tích & thiết kế hệ thống
+docs/analysis-and-design-ddd.md	Thiết kế theo Domain-Driven Design
+docs/architecture.md	Kiến trúc hệ thống
+docs/api-specs/	OpenAPI cho các service
+📄 Giấy phép
 
----
+Dự án sử dụng giấy phép MIT.
 
-## Documentation
+ Ghi chú
 
-| Document | Description |
-|----------|-------------|
-| [`GETTING_STARTED.md`](GETTING_STARTED.md) | Setup, workflow, submission checklist |
-| [`docs/analysis-and-design.md`](docs/analysis-and-design.md) | Analysis & Design — Step-by-Step Action approach |
-| [`docs/analysis-and-design-ddd.md`](docs/analysis-and-design-ddd.md) | Analysis & Design — Domain-Driven Design approach |
-| [`docs/architecture.md`](docs/architecture.md) | Architecture patterns, components & deployment |
-| [`docs/api-specs/`](docs/api-specs/) | OpenAPI 3.0 specifications for each service |
+Dự án được xây dựng phục vụ mục đích học tập môn Phát triển phần mềm hướng dịch vụ.
 
----
-
-## License
-
-This project uses the [MIT License](LICENSE).
-
-> Template by [Hung Dang](https://github.com/hungdn1701) · [Template guide](GETTING_STARTED.md)
-
+Mẫu thiết kế bởi Hung Dang
