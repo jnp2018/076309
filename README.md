@@ -7,7 +7,7 @@
 | Đinh Viết Chiến | B22DCVT076      | Backend Developer | API Gateway, User Service                     |
 | Phạm Đức Thiện  | B22DCDT309      | Backend Developer | Topic Service, Registration Service, Frontend |
 
----
+
 
 ## 📌 Mô tả dự án
 
@@ -22,7 +22,7 @@ Hệ thống giúp tự động hóa quy trình:
 
 👉 Giải pháp sử dụng **API Gateway kết hợp các dịch vụ độc lập**, giúp hệ thống dễ mở rộng và bảo trì.
 
----
+
 
 ## 🚀 Bắt đầu
 
@@ -36,7 +36,7 @@ Nội dung bao gồm:
 * Quy trình làm việc
 * Checklist nộp bài
 
----
+
 
 ## 🔄 Quy trình nghiệp vụ
 
@@ -58,7 +58,7 @@ Nội dung bao gồm:
 6. Giảng viên xét duyệt (duyệt / từ chối)
 7. Hệ thống cập nhật kết quả đăng ký
 
----
+
 
 ## 🏗️ Kiến trúc hệ thống
 
@@ -71,7 +71,7 @@ flowchart LR
     C --> D[User Service :5001]
     C --> E[Topic Service :5002]
     C --> F[Registration Service :5003]
-```
+
 
 ### Thành phần hệ thống
 
@@ -83,7 +83,6 @@ flowchart LR
 | Topic Service        | Quản lý đề tài               | Node.js + Express | 5002 |
 | Registration Service | Xử lý đăng ký và xét duyệt   | Node.js + Express | 5003 |
 
----
 
 ## ⚡ Hướng dẫn nhanh
 
@@ -102,7 +101,7 @@ curl http://localhost:5002/health
 curl http://localhost:5003/health
 ```
 
----
+
 
 ## 📚 Tài liệu
 
@@ -114,13 +113,13 @@ curl http://localhost:5003/health
 | docs/architecture.md            | Kiến trúc hệ thống              |
 | docs/api-specs/                 | Định nghĩa API (OpenAPI)        |
 
----
+
 
 ## 📄 Giấy phép
 
 Dự án sử dụng giấy phép MIT.
 
----
+
 
 ## 🙏 Ghi chú
 
