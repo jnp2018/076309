@@ -8,7 +8,6 @@
 | Phạm Đức Thiện  | B22DCDT309      | Backend Developer | Topic Service, Registration Service, Frontend |
 
 
-
 ## 📌 Mô tả dự án
 
 Dự án xây dựng hệ thống **đăng ký đề tài đồ án tốt nghiệp** theo kiến trúc **Microservices**.
@@ -59,10 +58,9 @@ Nội dung bao gồm:
 7. Hệ thống cập nhật kết quả đăng ký
 
 
-
 ## 🏗️ Kiến trúc hệ thống
 
-(Sơ đồ chi tiết xem trong ` docs/architecture.md `)
+(Sơ đồ chi tiết xem trong `docs/architecture.md`)
 
 ```mermaid
 flowchart LR
@@ -71,7 +69,7 @@ flowchart LR
     C --> D[User Service :5001]
     C --> E[Topic Service :5002]
     C --> F[Registration Service :5003]
-
+```
 
 ### Thành phần hệ thống
 
@@ -82,6 +80,7 @@ flowchart LR
 | User Service         | Quản lý tài khoản, đăng nhập | Node.js + Express | 5001 |
 | Topic Service        | Quản lý đề tài               | Node.js + Express | 5002 |
 | Registration Service | Xử lý đăng ký và xét duyệt   | Node.js + Express | 5003 |
+
 
 
 ## ⚡ Hướng dẫn nhanh
